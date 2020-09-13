@@ -47,6 +47,7 @@ export default class VideoPlayer extends Component {
       muted: this.props.muted,
       volume: this.props.volume,
       rate: this.props.rate,
+      playWithRecording: this.props.playWithRecording,
       // Controls
 
       isFullscreen:
@@ -729,6 +730,12 @@ export default class VideoPlayer extends Component {
     if (this.state.muted !== nextProps.muted) {
        this.setState({
           muted: nextProps.muted
+       });
+    }
+    
+    if (this.state.playWithRecording !== nextProps.playWithRecording) {
+       this.setState({
+          playWithRecording: nextProps.playWithRecording
        });
     }
 
