@@ -725,6 +725,12 @@ export default class VideoPlayer extends Component {
           rate: nextProps.rate
        });
     }
+    
+    if (this.state.muted !== nextProps.muted) {
+       this.setState({
+          muted: nextProps.muted
+       });
+    }
 
     if (this.styles.videoStyle !== nextProps.videoStyle) {
       this.styles.videoStyle = nextProps.videoStyle;
