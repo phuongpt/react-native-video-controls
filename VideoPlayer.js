@@ -732,6 +732,12 @@ export default class VideoPlayer extends Component {
           muted: nextProps.muted
        });
     }
+
+    if (this.state.volume !== nextProps.volume) {
+       this.setState({
+          volume: nextProps.volume
+       });
+    }
     
     if (this.state.playWithRecording !== nextProps.playWithRecording) {
        this.setState({
